@@ -16,12 +16,12 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/movies" element={<Movies />} />
-            <Route path="/shows" element={<Shows />} />
+            {/* <Route path="/shows" element={<Shows />} /> */}
             <Route path="/browse" element={<Browse />} />
-            <Route path="movies/info/:id" element={<Info />} />
+            <Route path="/movies/info/:id" element={<Info />} />
             <Route path="/info/:id" element={<Info />} />
             {/* <Route path="shows/info/:id" element={<Info />} /> */}
-            <Route path="browse/info/:id" element={<Info />} />
+            <Route path="/browse/info/:id" element={<Info />} />
           </Routes>
         </div>
       </BrowserRouter>

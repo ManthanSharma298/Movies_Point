@@ -5,7 +5,7 @@ A Movies Searching Website Using React-Js and Movies-DB API
 
 ## Features
 - Shows Trending Movies based on Ratings
-- User can for any movie they want
+- User can search for any movie they want
 - Material UI is used to make the website more attractive
 - Shows information about the movie, including trailer of that movie
 <table>

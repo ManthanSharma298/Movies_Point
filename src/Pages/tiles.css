@@ -1,0 +1,9 @@
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.subTitle {
+  color: #6ac045;
+}

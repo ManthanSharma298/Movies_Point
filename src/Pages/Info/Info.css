@@ -1,0 +1,29 @@
+.view {
+  display: flex;
+  background-color: #2d2d2f;
+}
+.genre {
+  display: flex;
+  font-size: xx-large;
+  font-weight: 900;
+  /* padding-right: 2px; */
+}
+.cont {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3%;
+  padding-right: 8%;
+}
+.overview {
+  color: #5c9e79;
+  font-size: x-large;
+}
+.tbtn {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: #2d2d2f;
+}

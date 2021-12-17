@@ -3,7 +3,6 @@ import axios from 'axios';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router';
-import { useNavigate } from 'react-router-dom';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 import './Info.css';
 
@@ -14,18 +13,24 @@ const Info = () => {
 
   async function getData() {
     const { data } = await axios.get(
-      `http://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_MOVIES_DB_KEY}&append_to_response=videos`
+      `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_MOVIES_DB_KEY}&language=en-US`
     );
-    console.log(data);
     setContent(data);
-    setVideo(data.videos.results[0]?.key);
+  }
+
+  async function getVideo() {
+    const { data } = await axios.get(
+      `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${process.env.REACT_APP_MOVIES_DB_KEY}&language=en-US`
+    );
+    // console.log(data);
+    setVideo(data.results[0]?.key);
   }
 
   useEffect(() => {
     getData();
+    getVideo();
   }, []);
 
-  const navigate = useNavigate();
   const btnTheme = createMuiTheme({
     palette: {
       primary: { main: '#6ac045' },
